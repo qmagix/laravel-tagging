@@ -1,10 +1,7 @@
 Laravel Taggable Trait
 ============
 
-[![Latest Stable Version](https://poser.pugx.org/Qmagix/laravel-tagging/v/stable.svg)](https://packagist.org/packages/Qmagix/laravel-tagging)
-[![Total Downloads](https://poser.pugx.org/Qmagix/laravel-tagging/downloads.svg)](https://packagist.org/packages/Qmagix/laravel-tagging)
-[![License](https://poser.pugx.org/qmagix/laravel-tagging/license.svg)](https://packagist.org/packages/qmagix/laravel-tagging)
-[![Build Status](https://travis-ci.org/qmagix/laravel-tagging.svg?branch=master)](https://travis-ci.org/qmagix/laravel-tagging)
+This package is a fork from rtconner's  same name package to support db string length issue that is not compatible with MySQL 5.6.  
 
 This package is not meant to handle javascript or html in any way. This package handles database storage and read/writes only.
 
@@ -16,7 +13,7 @@ There are no real limits on what characters can be used in a tag. It uses a slug
 #### Composer Install (for Laravel 5.3/Lumen 5)
 
 ```shell
-composer require qmagix/laravel-tagging "~2.2"
+composer require qmagix/laravel-tagging
 ```
 
 #### Install and then Run the migrations
