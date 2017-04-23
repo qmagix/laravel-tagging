@@ -6,8 +6,8 @@ You'll need to create your own service provider. It should look something like t
 ```php
 namespace My\Project\Providers;
 
-use Conner\Tagging\Providers\TaggingServiceProvider as ServiceProvider;
-use Conner\Tagging\Contracts\TaggingUtility;
+use Qmagix\Tagging\Providers\TaggingServiceProvider as ServiceProvider;
+use Qmagix\Tagging\Contracts\TaggingUtility;
 
 class TaggingServiceProvider extends ServiceProvider {
 
@@ -16,7 +16,7 @@ class TaggingServiceProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function register() 
+	public function register()
 	{
 		$this->app->singleton(TaggingUtility::class, function () {
 			return new MyNewUtilClass;
@@ -26,4 +26,4 @@ class TaggingServiceProvider extends ServiceProvider {
 }
 ```
 
-Where `MyNewUtilClass` is a class you have written. Your new Util class obviously needs to implement the `Conner\Tagging\Contracts\TaggingUtility` interface.
+Where `MyNewUtilClass` is a class you have written. Your new Util class obviously needs to implement the `Qmagix\Tagging\Contracts\TaggingUtility` interface.

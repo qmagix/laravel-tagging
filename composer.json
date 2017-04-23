@@ -1,13 +1,13 @@
 {
-	"name": "rtconner/laravel-tagging",
-	"description": "Use PHP traits to extend Laravel Eloquent Models to allow Tags. Models can be marked as Taggable.",
+	"name": "qmagix/laravel-tagging",
+	"description": "Use PHP traits to extend Laravel Eloquent Models to allow Tags. Models can be marked as Taggable. Derived from rtconner's work for compatibility with MySql 5.6 ",
 	"license": "MIT",
-	"homepage": "https://smartersoftware.net/packages/laravel-tagging-taggable",
+	"homepage": "https://github.com/qmagix/laravel-tagging",
 	"keywords": ["tag", "tags", "tagging", "laravel", "taggable", "tagged", "eloquent", "laravel5"],
 	"authors": [
 		{
-			"name": "Robert Conner",
-			"email": "rtconner@smarter.bz"
+			"name": "Qmagix",
+			"email": "q@computermagix.org"
 		}
 	],
 	"require": {
@@ -23,7 +23,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Conner\\Tagging\\": "src/"
+			"Qmagix\\Tagging\\": "src/"
 		}
 	},
 	"autoload-dev": {

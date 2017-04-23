@@ -1,9 +1,9 @@
 <?php
 
-namespace Conner\Tagging\Console\Commands;
+namespace Qmagix\Tagging\Console\Commands;
 
-use Conner\Tagging\Contracts\TaggingUtility;
-use Conner\Tagging\Model\TagGroup;
+use Qmagix\Tagging\Contracts\TaggingUtility;
+use Qmagix\Tagging\Model\TagGroup;
 use Illuminate\Console\Command;
 
 

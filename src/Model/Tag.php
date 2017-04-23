@@ -1,10 +1,10 @@
-<?php namespace Conner\Tagging\Model;
+<?php namespace Qmagix\Tagging\Model;
 
-use Conner\Tagging\Contracts\TaggingUtility;
+use Qmagix\Tagging\Contracts\TaggingUtility;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Copyright (C) 2014 Robert Conner
+ * Copyright (C) 2014 Robert Qmagix
  */
 class Tag extends Eloquent
 {
@@ -100,7 +100,7 @@ class Tag extends Eloquent
      */
     public function group()
     {
-        return $this->belongsTo('\Conner\Tagging\Model\TagGroup', 'tag_group_id');
+        return $this->belongsTo('\Qmagix\Tagging\Model\TagGroup', 'tag_group_id');
     }
 
     /**

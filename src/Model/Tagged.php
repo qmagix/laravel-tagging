@@ -1,10 +1,10 @@
-<?php namespace Conner\Tagging\Model;
+<?php namespace Qmagix\Tagging\Model;
 
-use Conner\Tagging\Contracts\TaggingUtility;
+use Qmagix\Tagging\Contracts\TaggingUtility;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Copyright (C) 2014 Robert Conner
+ * Copyright (C) 2014 Robert Qmagix
  */
 class Tagged extends Eloquent
 {
@@ -16,10 +16,10 @@ class Tagged extends Eloquent
 	public function __construct(array $attributes = array())
 	{
 		parent::__construct($attributes);
-		
+
 		$this->taggingUtility = app(TaggingUtility::class);
 	}
-	
+
 	/**
 	 * Morph to the tag
 	 *
@@ -29,7 +29,7 @@ class Tagged extends Eloquent
 	{
 		return $this->morphTo();
 	}
-	
+
 	/**
 	 * Get instance of tag linked to the tagged value
 	 *

@@ -1,4 +1,4 @@
-<?php namespace Conner\Tagging\Contracts;
+<?php namespace Qmagix\Tagging\Contracts;
 
 /**
  * Intergace of utility functions to help with various tagging functionality.
@@ -6,6 +6,7 @@
  * @author Rob Conner <rtconner+gh@gmail.com>
  *
  * Copyright (C) 2015 Robert Conner
+ * Copyright (C) 2017 Mod by QMagix
  */
 interface TaggingUtility
 {
@@ -30,7 +31,7 @@ interface TaggingUtility
 	 * @return string
 	 */
 	public static function slug($str);
-		
+
 	/**
 	 * Private! Please do not call this function directly, just let the Tag library use it.
 	 * Increment count of tag by one. This function will create tag record if it does not exist.
@@ -38,7 +39,7 @@ interface TaggingUtility
 	 * @param string $tagString
 	 */
 	public function incrementCount($tagString, $tagSlug, $count);
-	
+
 	/**
 	 * Private! Please do not call this function directly, let the Tag library use it.
 	 * Decrement count of tag by one. This function will create tag record if it does not exist.
@@ -46,7 +47,7 @@ interface TaggingUtility
 	 * @param string $tagString
 	 */
 	public function decrementCount($tagString, $tagSlug, $count);
-	
+
 	/**
 	 * Look at the tags table and delete any tags that are no londer in use by any taggable database rows.
 	 * Does not delete tags where 'suggest' is true
@@ -54,7 +55,7 @@ interface TaggingUtility
 	 * @return int
 	 */
 	public function deleteUnusedTags();
-	
+
 	/**
 	 * Return string with full namespace of the Tag model
 	 *

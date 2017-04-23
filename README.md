@@ -1,22 +1,22 @@
 Laravel Taggable Trait
 ============
 
-[![Latest Stable Version](https://poser.pugx.org/rtconner/laravel-tagging/v/stable.svg)](https://packagist.org/packages/rtconner/laravel-tagging)
-[![Total Downloads](https://poser.pugx.org/rtconner/laravel-tagging/downloads.svg)](https://packagist.org/packages/rtconner/laravel-tagging)
-[![License](https://poser.pugx.org/rtconner/laravel-tagging/license.svg)](https://packagist.org/packages/rtconner/laravel-tagging)
-[![Build Status](https://travis-ci.org/rtconner/laravel-tagging.svg?branch=master)](https://travis-ci.org/rtconner/laravel-tagging)
+[![Latest Stable Version](https://poser.pugx.org/Qmagix/laravel-tagging/v/stable.svg)](https://packagist.org/packages/Qmagix/laravel-tagging)
+[![Total Downloads](https://poser.pugx.org/Qmagix/laravel-tagging/downloads.svg)](https://packagist.org/packages/Qmagix/laravel-tagging)
+[![License](https://poser.pugx.org/qmagix/laravel-tagging/license.svg)](https://packagist.org/packages/qmagix/laravel-tagging)
+[![Build Status](https://travis-ci.org/qmagix/laravel-tagging.svg?branch=master)](https://travis-ci.org/qmagix/laravel-tagging)
 
 This package is not meant to handle javascript or html in any way. This package handles database storage and read/writes only.
 
 There are no real limits on what characters can be used in a tag. It uses a slug transform to determine if two tags are identical ("sugar-free" and "Sugar Free" would be treated as the same tag). Tag display names are run through Str::title()
 
-[Laravel/Lumen 5 Documentation](https://github.com/rtconner/laravel-tagging/tree/laravel-5)  
-[Laravel 4 Documentation](https://github.com/rtconner/laravel-tagging/tree/laravel-4)
+[Laravel/Lumen 5 Documentation](https://github.com/qmagix/laravel-tagging/tree/laravel-5)  
+[Laravel 4 Documentation](https://github.com/qmagix/laravel-tagging/tree/laravel-4)
 
 #### Composer Install (for Laravel 5.3/Lumen 5)
-	
+
 ```shell
-composer require rtconner/laravel-tagging "~2.2"
+composer require qmagix/laravel-tagging "~2.2"
 ```
 
 #### Install and then Run the migrations
@@ -25,11 +25,11 @@ The service provider does not load on every page load, so it should not slow dow
 
 ```php
 'providers' => array(
-	\Conner\Tagging\Providers\TaggingServiceProvider::class,
+	\Qmagix\Tagging\Providers\TaggingServiceProvider::class,
 );
 ```
 ```bash
-php artisan vendor:publish --provider="Conner\Tagging\Providers\TaggingServiceProvider"
+php artisan vendor:publish --provider="Qmagix\Tagging\Providers\TaggingServiceProvider"
 php artisan migrate
 ```
 
@@ -43,15 +43,15 @@ In app\bootstrap\app.php
 // Add this line in your config section
 $app->configure('tagging');
 // Add this line in your service provider section
-$app->register(Conner\Tagging\Providers\LumenTaggingServiceProvider::class);
+$app->register(Qmagix\Tagging\Providers\LumenTaggingServiceProvider::class);
 ```
 
 After these two steps are done, you can edit config/tagging.php with your prefered settings.
-	
+
 #### Setup your models
 ```php
 class Article extends \Illuminate\Database\Eloquent\Model {
-	use \Conner\Tagging\Taggable;
+	use \Qmagix\Tagging\Taggable;
 }
 ```
 
@@ -71,13 +71,13 @@ $article->untag(); // remove all tags
 
 $article->retag(array('Fruit', 'Fish')); // delete current tags and save new tags
 
-$article->tagNames(); // get array of related tag names	
+$article->tagNames(); // get array of related tag names
 
 Article::withAnyTag(['Gardening','Cooking'])->get(); // fetch articles with any tag listed
 
 Article::withAllTags(['Gardening', 'Cooking'])->get(); // only fetch articles with all the tags
 
-Conner\Tagging\Model\Tag::where('count', '>', 2)->get(); // return all tags used more than twice
+Qmagix\Tagging\Model\Tag::where('count', '>', 2)->get(); // return all tags used more than twice
 
 Article::existingTags(); // return collection of all existing tags on any articles
 ```

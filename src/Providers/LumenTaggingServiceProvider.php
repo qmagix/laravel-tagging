@@ -1,13 +1,13 @@
 <?php
 
-namespace Conner\Tagging\Providers;
+namespace Qmagix\Tagging\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Conner\Tagging\Contracts\TaggingUtility;
-use Conner\Tagging\Util;
+use Qmagix\Tagging\Contracts\TaggingUtility;
+use Qmagix\Tagging\Util;
 
 /**
- * Copyright (C) 2014 Robert Conner
+ * Copyright (C) 2014 Robert Qmagix
  */
 class LumenTaggingServiceProvider extends ServiceProvider
 {

@@ -1,10 +1,10 @@
-<?php namespace Conner\Tagging\Model;
+<?php namespace Qmagix\Tagging\Model;
 
-use Conner\Tagging\Contracts\TaggingUtility;
+use Qmagix\Tagging\Contracts\TaggingUtility;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
- * Copyright (C) 2014 Robert Conner
+ * Copyright (C) 2014 Robert Qmagix
  */
 class TagGroup extends Eloquent
 {

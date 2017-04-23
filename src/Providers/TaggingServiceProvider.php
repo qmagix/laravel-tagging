@@ -1,19 +1,19 @@
 <?php
 
-namespace Conner\Tagging\Providers;
+namespace Qmagix\Tagging\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Conner\Tagging\Contracts\TaggingUtility;
-use Conner\Tagging\Util;
+use Qmagix\Tagging\Contracts\TaggingUtility;
+use Qmagix\Tagging\Util;
 
 /**
- * Copyright (C) 2014 Robert Conner
+ * Copyright (C) 2014 Robert Qmagix
  */
 class TaggingServiceProvider extends ServiceProvider
 {
 
 	protected $commands = [
-		\Conner\Tagging\Console\Commands\GenerateTagGroup::class
+		\Qmagix\Tagging\Console\Commands\GenerateTagGroup::class
 	];
 
 
@@ -25,12 +25,12 @@ class TaggingServiceProvider extends ServiceProvider
 		$this->publishes([
 			__DIR__.'/../../config/tagging.php' => config_path('tagging.php')
 		], 'config');
-		
+
 		$this->publishes([
 			__DIR__.'/../../migrations/' => database_path('migrations')
 		], 'migrations');
 	}
-	
+
 	/**
 	 * Register the service provider.
 	 *
@@ -45,7 +45,7 @@ class TaggingServiceProvider extends ServiceProvider
 			return new Util;
 		});
 	}
-	
+
 	/**
 	 * (non-PHPdoc)
 	 * @see \Illuminate\Support\ServiceProvider::provides()

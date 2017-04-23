@@ -1,10 +1,10 @@
-<?php namespace Conner\Tagging\Contracts;
+<?php namespace Qmagix\Tagging\Contracts;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Database\Eloquent\Collection;
 
 /**
- * Copyright (C) 2015 Robert Conner
+ * Copyright (C) 2017 Qmagix
  */
 interface TaggableContract {
 
@@ -21,7 +21,7 @@ interface TaggableContract {
 	 * @param $tagName string or array
 	 */
 	public function tag($tagNames);
-	
+
 	/**
 	 * Return array of the tag names related to the current model
 	 *
@@ -35,14 +35,14 @@ interface TaggableContract {
 	 * @return array
 	 */
 	public function tagSlugs();
-	
+
 	/**
 	 * Remove the tag from this model
 	 *
 	 * @param $tagName string or array (or null to remove all tags)
 	 */
 	public function untag($tagNames=null);
-	
+
 	/**
 	 * Replace the tags from this model
 	 *
@@ -63,19 +63,19 @@ interface TaggableContract {
 	 * @param $tagNames array|string
 	 */
 	public function scopeWithAnyTag($query, $tagNames);
-	
+
 	/**
 	 * Return an array of all of the tags that are in use by this model
 	 *
 	 * @return \Illuminate\Database\Eloquent\Collection
 	 */
 	public static function existingTags();
-	
+
 	/**
 	 * Should untag on delete
 	 */
 	public static function untagOnDelete();
-	
+
 	/**
 	 * Delete tags that are not used anymore
 	 */

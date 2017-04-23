@@ -1,4 +1,4 @@
-<?php namespace Conner\Tagging\Events;
+<?php namespace Qmagix\Tagging\Events;
 
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Database\Eloquent\Model;
